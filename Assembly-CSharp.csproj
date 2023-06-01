@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{13A8AFB9-DDD8-8EC7-3947-72457D523509}</ProjectGuid>
+    <ProjectGuid>{8F480080-7DBE-71B0-69F3-04FC929B633B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,23 +56,23 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Game\Scripts\SavePoint.cs" />
-    <Compile Include="Assets\_Game\Scripts\Kunai.cs" />
-    <Compile Include="Assets\_Game\Scripts\StateMachine\AttackState.cs" />
     <Compile Include="Assets\_Game\Scripts\StateMachine\IdleState.cs" />
-    <Compile Include="Assets\_Game\Scripts\UIManager.cs" />
-    <Compile Include="Assets\_Game\Scripts\AttackArena.cs" />
-    <Compile Include="Assets\_Game\Scripts\HealthBar.cs" />
-    <Compile Include="Assets\_Game\Scripts\Enemy.cs" />
-    <Compile Include="Assets\_Game\Scripts\StateMachine\PatrolState.cs" />
     <Compile Include="Assets\_Game\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\_Game\Scripts\CombatText.cs" />
+    <Compile Include="Assets\_Game\Scripts\StateMachine\IState.cs" />
+    <Compile Include="Assets\_Game\Scripts\Character.cs" />
+    <Compile Include="Assets\_Game\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\_Game\Scripts\StateMachine\PatrolState.cs" />
+    <Compile Include="Assets\_Game\Scripts\SavePoint.cs" />
+    <Compile Include="Assets\_Game\Scripts\StateMachine\AttackState.cs" />
+    <Compile Include="Assets\_Game\Scripts\Enemy.cs" />
+    <Compile Include="Assets\_Game\Scripts\Kunai.cs" />
     <Compile Include="Assets\_Game\Scripts\Player.cs" />
     <Compile Include="Assets\_Game\Scripts\EnemySight.cs" />
+    <Compile Include="Assets\_Game\Scripts\CombatText.cs" />
+    <Compile Include="Assets\_Game\Scripts\AttackArena.cs" />
     <Compile Include="Assets\_Game\Scripts\MovingPlatform.cs" />
-    <Compile Include="Assets\_Game\Scripts\StateMachine\IState.cs" />
+    <Compile Include="Assets\_Game\Scripts\UIManager.cs" />
     <Compile Include="Assets\_Game\Scripts\StateMachine\IsDeadState.cs" />
-    <Compile Include="Assets\_Game\Scripts\Character.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

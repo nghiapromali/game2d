@@ -54,6 +54,7 @@ public class Player : Character
             rb.velocity = Vector2.zero;
             return;
         }
+        
 
         if (isGrounded)
         {
@@ -155,22 +156,25 @@ public class Player : Character
 
     public void Attack() 
     {
-        ChangeAnim("attack");
-        isAttack = true;
-        Invoke(nameof(ResetAttack), 0.5f);
-        ActiveAttack();
-        Invoke(nameof(DeActiveAttack), 0.5f);
-
-
+        if(isAttack == false && isGrounded)
+        {
+            ChangeAnim("attack");
+            isAttack = true;
+            Invoke(nameof(ResetAttack), 0.5f);
+            ActiveAttack();
+            Invoke(nameof(DeActiveAttack), 0.5f);
+        }
     }
     public void Throw()
     {
-        ChangeAnim("throw");
-        isAttack = true;
-        Invoke(nameof(ResetAttack), 0.5f);
-
-        Instantiate(kunaiPrefab, throwPoint.position, throwPoint.rotation);
-    }
+        if(isAttack == false)
+        {
+            ChangeAnim("throw");
+            isAttack = true;
+            Invoke(nameof(ResetAttack), 1.0f);
+            Instantiate(kunaiPrefab, throwPoint.position, throwPoint.rotation);
+        }
+     }
 
     private void ResetAttack()
     {
@@ -179,9 +183,13 @@ public class Player : Character
     }
     public void Jump()
     {
-        isJumping = true;
-        ChangeAnim("jump");
-        rb.AddForce(JumpForce * Vector2.up);
+        if (isJumping == false && isGrounded == true)
+        {
+            isJumping = true;
+            ChangeAnim("jump");
+            rb.AddForce(JumpForce * Vector2.up);
+        }
+        
     }
 
 
